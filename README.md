@@ -1,4 +1,4 @@
-<h2>This code is to extract email addresses from Outlook undelivered reports.</h2>
+<h2>This code is to extract email addresses from Outlook undelivered reports to an Excel file.</h2>
 
 *Please note that, this code is for Outlook VBA.
 
