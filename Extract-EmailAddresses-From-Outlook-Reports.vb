@@ -4,7 +4,7 @@ Dim i, n, selectedReportCount As Long
 Dim confirmationMsg As VbMsgBoxResult
 Dim fileDoesExist As Boolean
 Dim objWordApp As Word.Application
-Dim objWordDocument As Word.Documet
+Dim objWordDocument As Word.Document
 Dim objSelection As Outlook.Selection
 Dim objReport As Outlook.ReportItem
 Dim xlApp As Excel.Application
