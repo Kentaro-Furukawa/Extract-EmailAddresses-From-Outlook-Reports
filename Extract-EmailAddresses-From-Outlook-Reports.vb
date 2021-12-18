@@ -4,7 +4,7 @@ Dim i, n, selectedReportCount As Long
 Dim confirmationMsg As VbMsgBoxResult
 Dim fileDoesExist As Boolean
 Dim objWordApp As Word.Application
-Dim objWordDocument As Wordord.Documnet
+Dim objWordDocument As Word.Documet
 Dim objSelection As Outlook.Selection
 Dim objReport As Outlook.ReportItem
 Dim xlApp As Excel.Application
@@ -14,7 +14,7 @@ Dim xlSheet As Excel.Worksheet
 Public Sub ExtractEmailAddressesFromReports()
     ExceptionAddress = Array("example1@mail.com","example2@mail.com")
 
-    SetObjSelection = Outlook.Application.ActiveExplorer.Selection
+    Set ObjSelection = Outlook.Application.ActiveExplorer.Selection
     Call ConfirmationMessage
     Call CreateExcel
     Call CheckFileExist
@@ -23,7 +23,7 @@ Public Sub ExtractEmailAddressesFromReports()
         i = 0
         n = 1
         On Error Resume Next
-        For i selectedReportCount To 1 Step -1
+        For i = selectedReportCount To 1 Step -1
             Set objReport = objSelection.Item(i)
             Set objWordDocument = objReport.GetInspector.WordEditor
             Set objWordApp = objWordDocument.Application
@@ -48,7 +48,7 @@ Public Sub ExtractEmailAddressesFromReports()
 End Sub
 
 Private Sub ConfirmationMessage()
-    selectedReportCount = objSelection.selectedReportCount
+    selectedReportCount = objSelection.Count
         If selectedReportCount = 1 Then
             deno = "item"
         Else
