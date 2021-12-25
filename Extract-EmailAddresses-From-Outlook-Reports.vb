@@ -91,7 +91,7 @@ End Sub
 
 Private Sub InputToExcel()
     With xlApp
-        With lsBook.Windows(1).Activate
+        With xlBook.Windows(1).Activate
             xlSheet.Cells(n, 1).Value = strEmailAddresses
         End With
     End With
